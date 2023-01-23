@@ -40,7 +40,16 @@ if(!classIsFull && !isScheduleConflict){
 if(classIsFull){
     alert("There are too many students in this class. You are not enrolled.");
 }
-if(isScheduleConflict){
+if(isScheduleConflict) {
     alert("Maybe try again next semester!")
+}
+var isCouponValid = true;
+var isPremiumMember = confirm("Are you a premium member?");
+var itemsPurchased = parseInt(prompt("How many items are you purchasing today?"));
+
+if(isCouponValid && (isPremiumMember||itemsPurchased>=2)){
+    alert("You can use the coupon!")
+} else {
+    alert("You cannot use the coupon...")
 }
 
