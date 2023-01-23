@@ -4,12 +4,12 @@
 console.log("Hello from external JavaScript");
 alert("Welcome to my Website!");
 var usersFavoriteColor = prompt("What is your favorite color?");
-alert("Great, " + usersFavoriteColor + "is my favorite color too!")
+alert("Great, " + usersFavoriteColor + " is my favorite color too!");
 
 
-var daysRentingLittleMermaid = prompt("How many days are you renting the 'Little Mermaid'?")
-var daysRentingBrotherBear = prompt("How many days are you renting the 'Brother Bear'?")
-var daysRentingHercules = prompt("How many days are you renting the 'Hercules'?")
+var daysRentingLittleMermaid = parseInt(prompt("How many days are you renting the 'Little Mermaid'?"));
+var daysRentingBrotherBear = parseInt(prompt("How many days are you renting the 'Brother Bear'?"));
+var daysRentingHercules = parseInt(prompt("How many days are you renting the 'Hercules'?"));
 var dayRentalRate = 3;
 var totalRentalCost = (daysRentingLittleMermaid + daysRentingBrotherBear + daysRentingHercules) * dayRentalRate;
 alert("That will cost you: $" + totalRentalCost);
