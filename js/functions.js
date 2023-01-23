@@ -12,7 +12,9 @@ var name = prompt("Hello, what is your name?");
 //alert(sayHello(name));
 sayHello(name);
 function sayHello(userInput){
-    alert("Hello, " + userInput + "!");
+    let hello = ("Hello, " + userInput + "!");
+    alert(hello);
+    return hello;
 }
 
 /**
@@ -24,7 +26,7 @@ function sayHello(userInput){
  */
 
 var helloMessage = sayHello("Gage");
-
+console.log(helloMessage);
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
