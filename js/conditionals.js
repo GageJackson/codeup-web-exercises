@@ -84,7 +84,7 @@ switch (randomColor) {
     alert("Violet, you're turning violet!");
     break;
   default:
-    alert("I dont know anything about " + randomColor);
+    alert("I don't know anything about " + randomColor);
     break;
 }
 */
