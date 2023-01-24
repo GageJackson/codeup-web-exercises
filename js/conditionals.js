@@ -27,8 +27,8 @@
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+const randomColor = colors[Math.floor(Math.random() * colors.length)];
 console.log(randomColor);
 
 function analyzeColor(color) {
@@ -55,7 +55,7 @@ function analyzeColor(color) {
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-//alert(analyzeColor(randomColor));
+alert(analyzeColor(randomColor));
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
@@ -94,8 +94,8 @@ switch (randomColor) {
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-//var userColor = prompt("Give me a basic color and I'll say something witty");
-//alert(analyzeColor(userColor.toLowerCase()));
+let userColor = prompt("Give me a basic color and I'll say something witty");
+alert(analyzeColor(userColor.toLowerCase()));
 /* ########################################################################## */
 
 /**
@@ -149,9 +149,9 @@ function calculateTotal(luckyNum, total) {
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-/**
-var luckyNumber = Math.floor(Math.random() * 6);
-var userTotalBill = parseFloat(
+
+const luckyNumber = Math.floor(Math.random() * 6);
+let userTotalBill = parseFloat(
   prompt(
     "Hello, lucky diner! Please insert your bill total and see what discount you may reap!"
   )
@@ -163,7 +163,7 @@ alert(
     " you have to pay $" +
     calculateTotal(luckyNumber, userTotalBill)
 );
-*/
+
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -182,11 +182,11 @@ alert(
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-var userWantToEnterNumber = confirm("Would you like to enter a number?");
+let userWantToEnterNumber = confirm("Would you like to enter a number?");
 
 if (userWantToEnterNumber) {
-  var userNumber = parseFloat(prompt("Enter a number"));
-  var checkedNumber = checkIfNumber(userNumber);
+  let userNumber = parseFloat(prompt("Enter a number"));
+  let checkedNumber = checkIfNumber(userNumber);
   evenOrOdd(checkedNumber);
   numberPlus100(checkedNumber);
   positiveOrNegativeNumber(checkedNumber);
