@@ -183,16 +183,19 @@ alert(
  * HINT: The way we prompt for a value could be improved
  */
 let userWantToEnterNumber = confirm("Would you like to enter a number?");
-
-if (userWantToEnterNumber) {
-  let userNumber = parseFloat(prompt("Enter a number"));
-  let checkedNumber = checkIfNumber(userNumber);
-  evenOrOdd(checkedNumber);
-  numberPlus100(checkedNumber);
-  positiveOrNegativeNumber(checkedNumber);
-} else {
-  alert("Okay, no fun for you");
+funNumberInfo(userWantToEnterNumber);
+function funNumberInfo(userWantToEnterNumber) {
+  if (userWantToEnterNumber) {
+    let userNumber = parseFloat(prompt("Enter a number"));
+    let checkedNumber = checkIfNumber(userNumber);
+    evenOrOdd(checkedNumber);
+    numberPlus100(checkedNumber);
+    positiveOrNegativeNumber(checkedNumber);
+  } else {
+    alert("Okay, no fun for you");
+  }
 }
+
 function evenOrOdd(number) {
   if (number % 2 === 0) {
     alert(number + ": is even!");
