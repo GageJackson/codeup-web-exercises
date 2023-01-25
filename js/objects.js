@@ -101,7 +101,43 @@
    * > console.log(books[0].author.firstName) // "Douglas"
    * > console.log(books[0].author.lastName) // "Adams"
    */
-
+  let books = [
+    {
+      title: "Name of the Wind",
+      author: {
+        firstName: "Patrick",
+        lastName: "Rothfuss",
+      },
+    },
+    {
+      title: "Eye of the World",
+      author: {
+        firstName: "Robert",
+        lastName: "Jordan",
+      },
+    },
+    {
+      title: "Mistborn",
+      author: {
+        firstName: "Brandon",
+        lastName: "Sanderson",
+      },
+    },
+    {
+      title: "Ready Player One",
+      author: {
+        firstName: "Ernest",
+        lastName: "Cline",
+      },
+    },
+    {
+      title: "The Magicians",
+      author: {
+        firstName: "Lev",
+        lastName: "Grossman",
+      },
+    },
+  ];
   /**
    * TODO:
    * Loop through the books array and output the following information about
@@ -126,7 +162,19 @@
    *      ---
    *      ...
    */
-
+  function bookReader(books) {
+    let bookNumber = 0;
+    books.forEach(function (book) {
+      bookNumber++;
+      console.log("Book #" + bookNumber);
+      console.log("Title: " + book.title);
+      console.log(
+        "Author: " + book.author.firstName + " " + book.author.lastName
+      );
+      console.log("---");
+    });
+  }
+  bookReader(books);
   /**
    * Bonus:
    * - Create a function named `createBook` that accepts a title and author
@@ -137,4 +185,15 @@
    *   outputs the information described above. Refactor your loop to use your
    *   `showBookInfo` function.
    */
+  function createBook() {
+    let newBook = {};
+    let newBookTitle = prompt(
+      "Give me the title for your favorite book!",
+      "Pet Semetary"
+    );
+    let newBookAuthor = prompt(
+      "Who is the author for this book?",
+      "Steven King"
+    );
+  }
 })();

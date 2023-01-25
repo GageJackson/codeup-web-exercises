@@ -35,17 +35,17 @@ function analyzeColor(color) {
   if (color === "red") {
     return "Fire trucks are red";
   } else if (color === "orange") {
-    return "Oranges are orange...";
+    return "Orange you glad I didn't say banana?";
   } else if (color === "yellow") {
-    return "The sun is yellow";
+    return "Hello mellow yellow fellow";
   } else if (color === "green") {
-    return "Grass is green";
+    return "Green bean money machine";
   } else if (color === "blue") {
-    return "Water is blue";
+    return "I'm blue dabi di dabi di...";
   } else if (color === "indigo") {
-    return "Jeans are kinda indigo-ish...";
+    return "Made up color for sake of 7 colors...";
   } else if (color === "violet") {
-    return "Violet is turning violet!";
+    return "Violet, you're turning violet!";
   } else {
     return "I do not know anything about " + color;
   }
@@ -61,32 +61,34 @@ alert(analyzeColor(randomColor));
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 /**
-switch (randomColor) {
-  case "red":
-    alert("Fire trucks are red");
-    break;
-  case "orange":
-    alert("Orange you glad I didn't say banana?");
-    break;
-  case "yellow":
-    alert("Hello mellow yellow fellow");
-    break;
-  case "green":
-    alert("Green money is gross money...");
-    break;
-  case "blue":
-    alert("I'm blue dabi di dabi di...");
-    break;
-  case "indigo":
-    alert("Made up color for sake of 7 colors...");
-    break;
-  case "violet":
-    alert("Violet, you're turning violet!");
-    break;
-  default:
-    alert("I don't know anything about " + randomColor);
-    break;
-}
+ * function analyzeColor(color) {
+    switch (randomColor) {
+      case "red":
+        return("Fire trucks are red");
+
+      case "orange":
+        return("Orange you glad I didn't say banana?");
+
+      case "yellow":
+        return("Hello mellow yellow fellow");
+
+      case "green":
+        return("Green money is gross money...");
+
+      case "blue":
+        return("I'm blue dabi di dabi di...");
+
+      case "indigo":
+        return("Made up color for sake of 7 colors...");
+
+      case "violet":
+        return("Violet, you're turning violet!");
+
+      default:
+        return("I don't know anything about " + randomColor);
+
+    }
+ }
 */
 /**
  * TODO:
