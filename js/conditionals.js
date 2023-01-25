@@ -29,7 +29,7 @@
 //                  will contain a different color every time the page loads)
 const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 const randomColor = colors[Math.floor(Math.random() * colors.length)];
-console.log(randomColor);
+//console.log(randomColor);
 
 function analyzeColor(color) {
   if (color === "red") {
