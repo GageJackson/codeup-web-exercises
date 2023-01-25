@@ -186,7 +186,13 @@
    *   `showBookInfo` function.
    */
   function createBook() {
-    let newBook = {};
+    let newBook = {
+      title: "",
+      author: {
+        firstName: "",
+        lastName: "",
+      },
+    };
     let newBookTitle = prompt(
       "Give me the title for your favorite book!",
       "Pet Semetary"
@@ -195,5 +201,26 @@
       "Who is the author for this book?",
       "Steven King"
     );
+    let authorArray = newBookAuthor.split(" ");
+    newBook.title = newBookTitle;
+    newBook.author.firstName = authorArray[0];
+    newBook.author.lastName = authorArray[1];
+    console.log(newBook);
+    return newBook;
   }
+  function addBookToLibrary() {
+    let myLibrary = [];
+    let wouldLikeToAddBook = true;
+    do {
+      wouldLikeToAddBook = confirm(
+        "Would you like to add a book to my library?"
+      );
+      if (wouldLikeToAddBook) {
+        myLibrary.push(createBook());
+      }
+    } while (wouldLikeToAddBook);
+
+    bookReader(myLibrary);
+  }
+  addBookToLibrary();
 })();
