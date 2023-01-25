@@ -33,41 +33,65 @@
       est laborum.
     </p>
 
+    <button id="button-01">Java is Cool</button>
+    <button id="button-02">Hello, Blue</button>
+    <button id="button-03">Item List Needs Color</button>
+    <button id="button-04">Mission Accomplished</button>
+
     <script>
       (function () {
         "use strict";
-        // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = document.getElementById("main-header");
 
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is cool!";
-        // TODO: Uncomment the next line and get the sub header element by id
-        var subHeader = document.getElementById("sub-header");
+        var changeHelloWorldButton = function (event) {
+          // TODO: Uncomment next line and get the main header element by id
+          var mainHeader = document.getElementById("main-header");
 
-        // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "#00F";
+          // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+          mainHeader.innerHTML = "JavaScript is cool!";
+        };
 
-        // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName("li");
+        var colorHelloTextButton = function (event) {
+          // TODO: Uncomment the next line and get the sub header element by id
+          var subHeader = document.getElementById("sub-header");
 
-        // TODO: Set text color on every other list item to grey
-        // TODO: Set text color of li with dbid = 1 to blue
-        for (let i = 0; i < listItems.length; i++) {
-          var dbId = listItems[i].getAttribute("data-dbid");
-          if (i + 1 === 1) {
-            listItems[i].style.color = "#00F";
-          } else if ((i + 1) % 2 === 0) {
-            listItems[i].style.color = "#9b9b9b";
-          } else {
+          // TODO: Set the text color of subHeader to blue
+          subHeader.style.color = "#00F";
+        };
+
+        var changeListColorButton = function (event) {
+          // TODO: Uncomment the next line and get all list items
+          var listItems = document.getElementsByTagName("li");
+
+          // TODO: Set text color on every other list item to grey
+          // TODO: Set text color of li with dbid = 1 to blue
+          for (let i = 0; i < listItems.length; i++) {
+            var dbId = listItems[i].getAttribute("data-dbid");
+            if (i + 1 === 1) {
+              listItems[i].style.color = "#00F";
+            } else if ((i + 1) % 2 === 0) {
+              listItems[i].style.color = "#9b9b9b";
+            } else {
+            }
           }
-        }
+        };
 
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName("sub-paragraph");
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        //confused about the .item(0) part.
-        console.log(subParagraphs.item(0));
-        subParagraphs.item(0).innerHTML = "Mission Accomplished!";
+        var completeMissionButton = function (event) {
+          // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+          var subParagraphs = document.getElementsByClassName("sub-paragraph");
+          // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+          //confused about the .item(0) part.
+          console.log(subParagraphs.item(0));
+          subParagraphs.item(0).innerHTML = "Mission Accomplished!";
+        };
+
+        var button01 = document.getElementById("button-01");
+        button01.addEventListener("click", changeHelloWorldButton);
+        var button02 = document.getElementById("button-02");
+        button02.addEventListener("click", colorHelloTextButton);
+        var button03 = document.getElementById("button-03");
+        button03.addEventListener("click", changeListColorButton);
+        var button04 = document.getElementById("button-04");
+        button04.addEventListener("click", completeMissionButton);
       })();
     </script>
   </body>
