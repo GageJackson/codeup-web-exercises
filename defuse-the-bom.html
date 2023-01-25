@@ -7,7 +7,7 @@
 
   <body>
     <h2 id="message">
-      This BOM will self destruct in <span id="timer">5</span> seconds...
+      This BOM will self-destruct in <span id="timer">5</span> seconds...
     </h2>
     <button id="defuser">Defuse the BOM</button>
 
@@ -18,7 +18,7 @@
         var detonationTimer = 5;
         // TODO: This function needs to be called once every second
         var intervalID = setInterval(function () {
-          if (detonationTimer == 0) {
+          if (detonationTimer === 0) {
             alert("EXTERMINATE!");
             document.body.innerHTML = "";
             clearInterval(intervalID);
