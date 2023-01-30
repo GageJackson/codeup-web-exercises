@@ -209,18 +209,18 @@
     return newBook;
   }
   function addBookToLibrary() {
-    let myLibrary = [];
+    //let myLibrary = [];
     let wouldLikeToAddBook = true;
     do {
       wouldLikeToAddBook = confirm(
         "Would you like to add a book to my library?"
       );
       if (wouldLikeToAddBook) {
-        myLibrary.push(createBook());
+        books.push(createBook());
       }
     } while (wouldLikeToAddBook);
 
-    bookReader(myLibrary);
+    bookReader(books);
   }
   addBookToLibrary();
 })();

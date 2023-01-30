@@ -22,7 +22,7 @@ function doThing() {
   }
 }
 function numberGenerator() {
-  return Math.floor(Math.random() * 200 + 20);
+  return Math.floor(Math.random() * 180 + 20);
 }
 function isEvenOrOdd(number) {
   if (number % 2 === 0) {
