@@ -102,3 +102,7 @@ main {
 section.main {
   height: 300px;
 }
+a:hover {
+  color: #edcb96;
+  text-decoration: underline #edcb96;
+}
