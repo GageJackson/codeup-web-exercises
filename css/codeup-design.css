@@ -8,7 +8,8 @@
   --color-dark-gray: #626262;
   --color-black: #252525;
 
-  --size-icon: 18px;
+  --size-icon-sm: 18px;
+  --size-icon-md: 80px;
   --size-logo: 105px;
 
   --ff-heading: "Abel", sans-serif;
@@ -30,6 +31,7 @@
 }
 body {
   color: var(--color-black);
+  background: var(--color-dark-gray);
 }
 
 h1 {
@@ -59,11 +61,6 @@ a {
   color: var(--color-light-gray);
   margin-right: 1em;
 }
-.big-icon {
-  color: var(--color-white);
-  font-style: var(--ff-heading);
-  font-size: var(--fs-icon);
-}
 .logo-text {
   font-style: var(--ff-heading);
   font-size: var(--fs-logo);
@@ -74,10 +71,28 @@ a {
   width: var(--size-logo);
   margin-right: 0.5em;
 }
-.small-icon {
+.small-icon-text {
   color: var(--color-black);
   font-style: var(--ff-heading);
   font-size: var(--fs-icon);
+}
+.small-icon-bg {
+  height: var(--size-icon-sm);
+  width: var(--size-icon-sm);
+  text-align: center;
+  border-radius: 100%;
+}
+.big-icon-text {
+  color: var(--color-white);
+  font-style: var(--ff-heading);
+  font-size: var(--fs-icon);
+}
+.big-icon-bg {
+  height: var(--size-icon-md);
+  width: var(--size-icon-md);
+  text-align: center;
+  border-radius: 100%;
+  outline: solid 0.25em var(--color-white);
 }
 .bg-red {
   background: var(--color-red);
@@ -90,4 +105,7 @@ a {
 }
 .bg-blue {
   background: var(--color-blue);
+}
+.bg-body {
+  background: var(--color-green);
 }
