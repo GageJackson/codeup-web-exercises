@@ -18,22 +18,24 @@
   </head>
 
   <body>
-    <nav class="navbar">
-      <div class="container-fluid d-flex text-white">
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid d-flex justify-content-start">
         <a class="navbar-brand" href="#">
           <img src="img/logo_java.svg" alt="logo" width="30" height="30" />
           PIZZA GHOST
         </a>
         <a class="nav-link" href="#">Order Online</a>
         <a class="nav-link" href="#">Menu</a>
-        <form class="d-flex">
+        <form class="d-flex me-auto">
           <input
             class="form-control"
             type="search"
             placeholder="Zip Code"
             aria-label="Search"
           />
-          <button class="btn btn-outline-primary" type="submit">Search</button>
+          <button class="btn btn-outline-primary" type="submit">
+            Search stores near you!
+          </button>
         </form>
         <a class="nav-link" href="#">
           <svg

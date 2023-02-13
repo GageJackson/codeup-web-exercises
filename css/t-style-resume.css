@@ -1,0 +1,18 @@
+h1 {
+  color: #597542;
+}
+h2 {
+  font-weight: normal;
+}
+h3 {
+  color: #597542;
+  font-size: 1.25em;
+}
+h4 {
+  font-size: 1em;
+}
+hr {
+  border: solid 3px #597542;
+  opacity: 1;
+  margin-bottom: 2em;
+}
