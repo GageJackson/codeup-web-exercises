@@ -23,11 +23,11 @@
     <link rel="stylesheet" href="css/codeup-design.css" />
   </head>
 
-  <body class="bg-body">
+  <body>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand logo-text" href="#">
-          <img src="assets/logo.png" alt="" class="logo-image" />codeup design
+        <a class="navbar-brand" href="#">
+          <img src="assets/logo.png" alt="" class="logo-image" />
         </a>
         <button
           class="navbar-toggler"
@@ -38,9 +38,23 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon border"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              /></svg
+          ></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
+          <span class="logo-text">codeup design</span>
           <ul class="navbar-nav">
             <li>
               <a aria-current="page" href="#">SERVICES</a>
@@ -59,163 +73,209 @@
       </div>
     </nav>
     <main class="container">
-      <h1>VISUAL DESIGN & WEB DEVELOPMENT</h1>
-      <h2>FROM PARK CITY, UTAH</h2>
-      <div class="row">
+      <h1 class="text-center mb-5">VISUAL DESIGN & WEB DEVELOPMENT</h1>
+      <h2 class="text-center mb-5">FROM PARK CITY, UTAH</h2>
+      <section class="row mb-5">
         <div class="d-flex flex-row justify-content-center border">
-          <div class="col-1 border mx-3">
-            <div class="big-icon-bg big-icon-text bg-red">DESIGN</div>
+          <div class="col-3">
+            <div
+              class="big-icon-bg big-icon-text bg-red d-flex flex-column justify-content-center"
+            >
+              DESIGN
+            </div>
           </div>
-          <div class="col-1 mx-3">
-            <div class="big-icon-bg big-icon-text bg-yellow">DEVELOP</div>
+          <div class="col-3">
+            <div
+              class="big-icon-bg big-icon-text bg-yellow d-flex flex-column justify-content-center"
+            >
+              DEVELOP
+            </div>
           </div>
-          <div class="col-1 mx-3">
-            <div class="big-icon-bg big-icon-text bg-green">SUPPORT</div>
+          <div class="col-3">
+            <div
+              class="big-icon-bg big-icon-text bg-green d-flex flex-column justify-content-center"
+            >
+              SUPPORT
+            </div>
           </div>
-          <div class="col-1 mx-3">
-            <div class="big-icon-bg big-icon-text bg-blue">HOST</div>
+          <div class="col-3">
+            <div
+              class="big-icon-bg big-icon-text bg-blue d-flex flex-column justify-content-center"
+            >
+              HOST
+            </div>
           </div>
         </div>
-      </div>
-      <hr />
+      </section>
+      <hr class="mb-5" />
       <div class="row">
-        <div class="col-md-8">
-          <h4>SELECTED WORK</h4>
-          <div class="row">
-            <div class="col-md-6">
-              <img
-                src="assets/images/apple-ipad.jpg"
-                alt="apple ipad"
-                class="med-image"
-              />
-              <div class="d-flex justify-content-between">
-                <h4>FEATURED PROJECT</h4>
-                <div class="d-flex">
-                  <div class="small-icon-bg bg-red">
-                    <p class="small-icon-text">D</p>
-                  </div>
-                  <div class="small-icon-bg bg-yellow">
-                    <p class="small-icon-text">D</p>
-                  </div>
-                  <div class="small-icon-bg bg-green">
-                    <p class="small-icon-text">S</p>
-                  </div>
-                  <div class="small-icon-bg bg-blue">
-                    <p class="small-icon-text">H</p>
+        <div class="col-lg-8">
+          <h4 class="text-center mb-5">SELECTED WORK</h4>
+          <div
+            class="row d-flex justify-content-md-around justify-content-center"
+          >
+            <article class="col-xs-6 work-example">
+              <section class="row">
+                <img
+                  src="assets/images/apple-ipad.jpg"
+                  alt="apple ipad"
+                  class="med-image"
+                />
+              </section>
+              <section class="row mb-3">
+                <div class="col-8">
+                  <h4>FEATURED PROJECT</h4>
+                </div>
+                <div class="col-4">
+                  <div class="d-flex justify-content-end">
+                    <div class="small-icon-bg bg-red">
+                      <p class="small-icon-text">D</p>
+                    </div>
+                    <div class="small-icon-bg bg-yellow">
+                      <p class="small-icon-text">D</p>
+                    </div>
+                    <div class="small-icon-bg bg-green">
+                      <p class="small-icon-text">S</p>
+                    </div>
+                    <div class="small-icon-bg bg-blue">
+                      <p class="small-icon-text">H</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <img
-                src="assets/images/macbook.jpg"
-                alt="macbook"
-                class="med-image"
-              />
-              <div class="d-flex justify-content-between">
-                <h4>FEATURED PROJECT</h4>
-                <div class="d-flex">
-                  <div class="small-icon-bg bg-red">
-                    <p class="small-icon-text">D</p>
-                  </div>
-                  <div class="small-icon-bg bg-yellow">
-                    <p class="small-icon-text">D</p>
-                  </div>
-                  <div class="small-icon-bg bg-green">
-                    <p class="small-icon-text">S</p>
-                  </div>
-                  <div class="small-icon-bg bg-blue">
-                    <p class="small-icon-text">H</p>
+              </section>
+            </article>
+            <article class="col-xs-6 work-example">
+              <section class="row">
+                <img
+                  src="assets/images/apple-ipad.jpg"
+                  alt="apple ipad"
+                  class="med-image"
+                />
+              </section>
+              <section class="row mb-3">
+                <div class="col-8">
+                  <h4>FEATURED PROJECT</h4>
+                </div>
+                <div class="col-4">
+                  <div class="d-flex justify-content-end">
+                    <div class="small-icon-bg bg-red">
+                      <p class="small-icon-text">D</p>
+                    </div>
+                    <div class="small-icon-bg bg-yellow">
+                      <p class="small-icon-text">D</p>
+                    </div>
+                    <div class="small-icon-bg bg-green">
+                      <p class="small-icon-text">S</p>
+                    </div>
+                    <div class="small-icon-bg bg-blue">
+                      <p class="small-icon-text">H</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <img src="assets/images/man.jpg" alt="man" class="med-image" />
-              <div class="d-flex justify-content-between">
-                <h4>FEATURED PROJECT</h4>
-                <div class="d-flex">
-                  <div class="small-icon-bg bg-red">
-                    <p class="small-icon-text">D</p>
-                  </div>
-                  <div class="small-icon-bg bg-yellow">
-                    <p class="small-icon-text">D</p>
-                  </div>
-                  <div class="small-icon-bg bg-green">
-                    <p class="small-icon-text">S</p>
-                  </div>
-                  <div class="small-icon-bg bg-blue">
-                    <p class="small-icon-text">H</p>
+              </section>
+            </article>
+            <article class="col-xs-6 work-example">
+              <section class="row">
+                <img
+                  src="assets/images/apple-ipad.jpg"
+                  alt="apple ipad"
+                  class="med-image"
+                />
+              </section>
+              <section class="row mb-3">
+                <div class="col-8">
+                  <h4>FEATURED PROJECT</h4>
+                </div>
+                <div class="col-4">
+                  <div class="d-flex justify-content-end">
+                    <div class="small-icon-bg bg-red">
+                      <p class="small-icon-text">D</p>
+                    </div>
+                    <div class="small-icon-bg bg-yellow">
+                      <p class="small-icon-text">D</p>
+                    </div>
+                    <div class="small-icon-bg bg-green">
+                      <p class="small-icon-text">S</p>
+                    </div>
+                    <div class="small-icon-bg bg-blue">
+                      <p class="small-icon-text">H</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <img
-                src="assets/images/security.jpg"
-                alt="security"
-                class="med-image"
-              />
-              <div class="d-flex justify-content-between">
-                <h4>FEATURED PROJECT</h4>
-                <div class="d-flex">
-                  <div class="small-icon-bg bg-red">
-                    <p class="small-icon-text">D</p>
-                  </div>
-                  <div class="small-icon-bg bg-yellow">
-                    <p class="small-icon-text">D</p>
-                  </div>
-                  <div class="small-icon-bg bg-green">
-                    <p class="small-icon-text">S</p>
-                  </div>
-                  <div class="small-icon-bg bg-blue">
-                    <p class="small-icon-text">H</p>
+              </section>
+            </article>
+            <article class="col-xs-6 work-example">
+              <section class="row">
+                <img
+                  src="assets/images/apple-ipad.jpg"
+                  alt="apple ipad"
+                  class="med-image"
+                />
+              </section>
+              <section class="row mb-3">
+                <div class="col-8">
+                  <h4>FEATURED PROJECT</h4>
+                </div>
+                <div class="col-4">
+                  <div class="d-flex justify-content-end">
+                    <div class="small-icon-bg bg-red">
+                      <p class="small-icon-text">D</p>
+                    </div>
+                    <div class="small-icon-bg bg-yellow">
+                      <p class="small-icon-text">D</p>
+                    </div>
+                    <div class="small-icon-bg bg-green">
+                      <p class="small-icon-text">S</p>
+                    </div>
+                    <div class="small-icon-bg bg-blue">
+                      <p class="small-icon-text">H</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </section>
+            </article>
           </div>
         </div>
-        <div class="col-md-4">
-          <h4>THE LAST</h4>
-          <div class="row">
-            <div class="col-3">
+        <div class="col-lg-4">
+          <h4 class="text-center mb-5">THE LAST</h4>
+          <article class="row">
+            <section class="col-3 mb-5">
               <img
                 class="small-image"
                 src="assets/images/mobile-phone.jpg"
                 alt="cellphone"
               />
-            </div>
-            <div class="col-9">
+            </section>
+            <section class="col-9">
               <h3>THE ADMIN BAR AND ABSOLUTE POSITIONING</h3>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-3">
+            </section>
+          </article>
+          <article class="row mb-5">
+            <section class="col-3">
               <img
                 class="small-image"
                 src="assets/images/head.jpg"
                 alt="head"
               />
-            </div>
-            <div class="col-9">
+            </section>
+            <section class="col-9">
               <h3>NIBBLER AWESOME WEBSITE TESTING</h3>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-3">
+            </section>
+          </article>
+          <article class="row mb-5">
+            <section class="col-3">
               <img
                 class="small-image"
                 src="assets/images/ipad.jpg"
                 alt="head"
               />
-            </div>
-            <div class="col-9">
+            </section>
+            <section class="col-9">
               <h3>HOW TO GET GOOGLE TO LIKE YOU</h3>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
+            </section>
+          </article>
+          <article class="row">
+            <section class="col">
               <h4>LAST TWEET</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
@@ -223,8 +283,8 @@
                 maxime minus necessitatibus numquam quia quibusdam, quod
                 similique?
               </p>
-            </div>
-          </div>
+            </section>
+          </article>
         </div>
       </div>
     </main>

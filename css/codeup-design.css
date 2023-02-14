@@ -9,7 +9,7 @@
   --color-black: #252525;
 
   --size-icon-sm: 18px;
-  --size-icon-md: 60px;
+  --size-icon-md: 70px;
   --size-image-sm: 60px;
   --size-image-md-w: 295px;
   --size-image-md-h: 195px;
@@ -25,7 +25,7 @@
   --fs-h4: 1em;
   --fs-p: 1em;
   --fs-a: 1em;
-  --fs-icon: 1em;
+  --fs-icon: 0.75em;
   --fs-logo: 2em;
 }
 
@@ -36,7 +36,7 @@
 }
 body {
   color: var(--color-black);
-  background: var(--color-dark-gray);
+  background: var(--color-light-gray);
 }
 
 h1 {
@@ -63,18 +63,18 @@ a {
   font-family: var(--ff-body);
   font-size: var(--fs-a);
   text-decoration: none;
-  color: var(--color-light-gray);
+  color: var(--color-dark-gray);
   margin-right: 1em;
 }
 .logo-text {
   font-family: var(--ff-logo);
   font-size: var(--fs-logo);
-  color: var(--color-dark-gray);
+  color: var(--color-black);
+  margin-right: 1em;
 }
 .logo-image {
   height: var(--size-logo);
   width: var(--size-logo);
-  margin-right: 0.5em;
 }
 .small-icon-text {
   color: var(--color-black);
@@ -97,7 +97,7 @@ a {
   width: var(--size-icon-md);
   text-align: center;
   border-radius: 100%;
-  outline: solid 0.35em var(--color-white);
+  border: solid 0.35em var(--color-white);
 }
 .small-image {
   height: var(--size-image-sm);
@@ -123,4 +123,8 @@ a {
 }
 .bg-body {
   background: var(--color-green);
+}
+
+.work-example {
+  width: var(--size-image-md-w);
 }
