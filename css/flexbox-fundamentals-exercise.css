@@ -88,7 +88,7 @@ section:nth-of-type(1) div:last-child {
 
 section:nth-of-type(3) {
   /* enter needed declarations here */
-  justify-content: space-between;
+  align-items: center;
 }
 
 section:nth-of-type(3) h3 {
@@ -109,8 +109,6 @@ section:nth-of-type(3) h3 {
   width: 5em;
   background: brown;
   /* enter needed declarations here */
-  flex-direction: row;
-  justify-content: space-evenly;
   flex-grow: 1;
 }
 

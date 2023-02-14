@@ -9,7 +9,10 @@
   --color-black: #252525;
 
   --size-icon-sm: 18px;
-  --size-icon-md: 80px;
+  --size-icon-md: 60px;
+  --size-image-sm: 60px;
+  --size-image-md-w: 295px;
+  --size-image-md-h: 195px;
   --size-logo: 50px;
 
   --ff-body: "Abel", sans-serif;
@@ -29,6 +32,7 @@
 * {
   margin: 0;
   padding: 0;
+  outline: solid 1px lime;
 }
 body {
   color: var(--color-black);
@@ -93,7 +97,17 @@ a {
   width: var(--size-icon-md);
   text-align: center;
   border-radius: 100%;
-  outline: solid 0.25em var(--color-white);
+  outline: solid 0.35em var(--color-white);
+}
+.small-image {
+  height: var(--size-image-sm);
+  width: var(--size-image-sm);
+  object-fit: cover;
+}
+.med-image {
+  height: var(--size-image-md-h);
+  width: var(--size-image-md-w);
+  object-fit: cover;
 }
 .bg-red {
   background: var(--color-red);
