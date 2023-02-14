@@ -10,10 +10,11 @@
 
   --size-icon-sm: 18px;
   --size-icon-md: 80px;
-  --size-logo: 105px;
+  --size-logo: 50px;
 
-  --ff-heading: "Abel", sans-serif;
-  --ff-body: "Anton", sans-serif;
+  --ff-body: "Abel", sans-serif;
+  --ff-heading: "Anton", sans-serif;
+  --ff-logo: "Abel", sans-serif;
 
   --fs-h1: 3em;
   --fs-h2: 2em;
@@ -22,7 +23,7 @@
   --fs-p: 1em;
   --fs-a: 1em;
   --fs-icon: 1em;
-  --fs-logo: 3em;
+  --fs-logo: 2em;
 }
 
 * {
@@ -35,34 +36,34 @@ body {
 }
 
 h1 {
-  font-style: var(--ff-heading);
+  font-family: var(--ff-heading);
   font-size: var(--fs-h1);
 }
 h2 {
-  font-style: var(--ff-heading);
+  font-family: var(--ff-heading);
   font-size: var(--fs-h2);
 }
 h3 {
-  font-style: var(--ff-heading);
+  font-family: var(--ff-heading);
   font-size: var(--fs-h3);
 }
 h4 {
-  font-style: var(--ff-body);
+  font-family: var(--ff-body);
   font-size: var(--fs-h4);
 }
 p {
-  font-style: var(--ff-body);
+  font-family: var(--ff-body);
   font-size: var(--fs-p);
 }
 a {
-  font-style: var(--ff-heading);
+  font-family: var(--ff-body);
   font-size: var(--fs-a);
   text-decoration: none;
   color: var(--color-light-gray);
   margin-right: 1em;
 }
 .logo-text {
-  font-style: var(--ff-heading);
+  font-family: var(--ff-logo);
   font-size: var(--fs-logo);
   color: var(--color-dark-gray);
 }
@@ -73,7 +74,7 @@ a {
 }
 .small-icon-text {
   color: var(--color-black);
-  font-style: var(--ff-heading);
+  font-family: var(--ff-heading);
   font-size: var(--fs-icon);
 }
 .small-icon-bg {
@@ -84,7 +85,7 @@ a {
 }
 .big-icon-text {
   color: var(--color-white);
-  font-style: var(--ff-heading);
+  font-family: var(--ff-heading);
   font-size: var(--fs-icon);
 }
 .big-icon-bg {
