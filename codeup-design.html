@@ -24,7 +24,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-md">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="assets/logo.png" alt="" class="logo-image" />
@@ -70,10 +70,26 @@
             </li>
           </ul>
         </div>
+        <div id="container-size-display">
+          <span class="bg-info text-white p-1 d-block d-sm-none">XS</span>
+          <span class="bg-info text-white p-1 d-none d-sm-block d-md-none"
+            >SM</span
+          >
+          <span class="bg-info text-white p-1 d-none d-md-block d-lg-none"
+            >MD</span
+          >
+          <span class="bg-info text-white p-1 d-none d-lg-block d-xl-none"
+            >LG</span
+          >
+          <span class="bg-info text-white p-1 d-none d-xl-block d-xxl-none"
+            >XL</span
+          >
+          <span class="bg-info text-white p-1 d-none d-xxl-block">XXL</span>
+        </div>
       </div>
     </nav>
     <main class="container">
-      <h1 class="text-center mb-5">VISUAL DESIGN & WEB DEVELOPMENT</h1>
+      <h1 class="text-center my-5">VISUAL DESIGN & WEB DEVELOPMENT</h1>
       <h2 class="text-center mb-5">FROM PARK CITY, UTAH</h2>
       <section class="row mb-5">
         <div class="d-flex flex-row justify-content-center border">
@@ -109,17 +125,17 @@
       </section>
       <hr class="mb-5" />
       <div class="row">
-        <div class="col-lg-8">
+        <div id="selected-work-section" class="col-lg-8">
           <h4 class="text-center mb-5">SELECTED WORK</h4>
           <div
             class="row d-flex justify-content-md-around justify-content-center"
           >
-            <article class="col-xs-6 work-example">
+            <article class="col-md-6">
               <section class="row">
                 <img
                   src="assets/images/apple-ipad.jpg"
                   alt="apple ipad"
-                  class="med-image"
+                  class="w-100"
                 />
               </section>
               <section class="row mb-3">
@@ -144,12 +160,12 @@
                 </div>
               </section>
             </article>
-            <article class="col-xs-6 work-example">
+            <article class="col-md-6">
               <section class="row">
                 <img
-                  src="assets/images/apple-ipad.jpg"
+                  src="assets/images/macbook.jpg"
                   alt="apple ipad"
-                  class="med-image"
+                  class="w-100"
                 />
               </section>
               <section class="row mb-3">
@@ -174,12 +190,12 @@
                 </div>
               </section>
             </article>
-            <article class="col-xs-6 work-example">
+            <article class="col-md-6">
               <section class="row">
                 <img
-                  src="assets/images/apple-ipad.jpg"
+                  src="assets/images/man.jpg"
                   alt="apple ipad"
-                  class="med-image"
+                  class="w-100 h-75"
                 />
               </section>
               <section class="row mb-3">
@@ -204,12 +220,12 @@
                 </div>
               </section>
             </article>
-            <article class="col-xs-6 work-example">
+            <article class="col-md-6">
               <section class="row">
                 <img
-                  src="assets/images/apple-ipad.jpg"
+                  src="assets/images/security.jpg"
                   alt="apple ipad"
-                  class="med-image"
+                  class="w-100"
                 />
               </section>
               <section class="row mb-3">
@@ -236,41 +252,41 @@
             </article>
           </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 d-none d-lg-block ps-5">
           <h4 class="text-center mb-5">THE LAST</h4>
-          <article class="row">
-            <section class="col-3 mb-5">
+          <article class="row mb-5">
+            <section class="col-3 col-lg-4 col-xl-auto">
               <img
                 class="small-image"
                 src="assets/images/mobile-phone.jpg"
                 alt="cellphone"
               />
             </section>
-            <section class="col-9">
+            <section class="col">
               <h3>THE ADMIN BAR AND ABSOLUTE POSITIONING</h3>
             </section>
           </article>
           <article class="row mb-5">
-            <section class="col-3">
+            <section class="col-3 col-lg-4 col-xl-auto">
               <img
                 class="small-image"
                 src="assets/images/head.jpg"
                 alt="head"
               />
             </section>
-            <section class="col-9">
+            <section class="col">
               <h3>NIBBLER AWESOME WEBSITE TESTING</h3>
             </section>
           </article>
           <article class="row mb-5">
-            <section class="col-3">
+            <section class="col-3 col-lg-4 col-xl-auto">
               <img
                 class="small-image"
                 src="assets/images/ipad.jpg"
                 alt="head"
               />
             </section>
-            <section class="col-9">
+            <section class="col">
               <h3>HOW TO GET GOOGLE TO LIKE YOU</h3>
             </section>
           </article>

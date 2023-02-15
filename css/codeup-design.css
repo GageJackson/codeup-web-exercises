@@ -22,7 +22,7 @@
   --fs-h1: 3em;
   --fs-h2: 2em;
   --fs-h3: 1.25em;
-  --fs-h4: 1em;
+  --fs-h4: 0.85em;
   --fs-p: 1em;
   --fs-a: 1em;
   --fs-icon: 0.75em;
@@ -38,7 +38,6 @@ body {
   color: var(--color-black);
   background: var(--color-light-gray);
 }
-
 h1 {
   font-family: var(--ff-heading);
   font-size: var(--fs-h1);
@@ -65,6 +64,9 @@ a {
   text-decoration: none;
   color: var(--color-dark-gray);
   margin-right: 1em;
+}
+.container {
+  padding: 1em 3em;
 }
 .logo-text {
   font-family: var(--ff-logo);
@@ -124,7 +126,6 @@ a {
 .bg-body {
   background: var(--color-green);
 }
-
 .work-example {
   width: var(--size-image-md-w);
 }
