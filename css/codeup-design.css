@@ -100,6 +100,7 @@ a {
   text-align: center;
   border-radius: 100%;
   border: solid 0.35em var(--color-white);
+  margin: 0.5em 0;
 }
 .small-image {
   height: var(--size-image-sm);
