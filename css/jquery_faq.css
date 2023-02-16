@@ -1,0 +1,9 @@
+.hidden {
+  visibility: hidden;
+}
+.shown {
+  visibility: visible;
+}
+.highlighted {
+  background: #ff0;
+}
