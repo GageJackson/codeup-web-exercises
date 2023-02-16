@@ -21,10 +21,10 @@
     <link rel="stylesheet" href="css/jquery_faq.css" />
   </head>
   <body>
-    <main class="container border">
-      <section>
+    <main class="container">
+      <section class="border p-3 m-3">
         <h1 class="fancy-header">Coffee FAQ's</h1>
-        <h2>TestText</h2>
+        <h3>TestText</h3>
         <dl>
           <div class="highlight">
             <dt>
@@ -158,6 +158,62 @@
           </div>
         </dl>
         <button class="btn btn-primary toggle-hidden">Show Info</button>
+      </section>
+      <section class="border m-3 p-3 d-flex">
+        <div class="m-3 border p-3">
+          <h3 class="park">Park 1</h3>
+          <ul class="fun-facts">
+            <li>fun fact</li>
+            <li>fun fact</li>
+            <li>fun fact</li>
+            <li>fun fact</li>
+          </ul>
+        </div>
+        <div class="m-3 border p-3">
+          <h3 class="park">Park 2</h3>
+          <ul class="fun-facts">
+            <li>fun fact</li>
+            <li>fun fact</li>
+            <li>fun fact</li>
+            <li>fun fact</li>
+          </ul>
+        </div>
+        <div class="m-3 border p-3">
+          <h3 class="park">Park 3</h3>
+          <ul class="fun-facts">
+            <li>fun fact</li>
+            <li>fun fact</li>
+            <li>fun fact</li>
+            <li>fun fact</li>
+          </ul>
+        </div>
+        <button class="btn btn-primary toggle-best-facts align-self-center">
+          Best facts
+        </button>
+      </section>
+      <section class="border m-3 p-3 d-flex justify-content-around">
+        <div class="d-flex flex-column justify-content-center p-3">
+          <div id="frame1" class="frame mb-3">
+            <img src="assets/images/ipad.jpg" class="image" id="image-1" />
+          </div>
+          <button id="btn-swap-1" class="btn btn-primary">Swap</button>
+        </div>
+        <div class="d-flex flex-column justify-content-center p-3">
+          <div id="frame2" class="frame mb-3">
+            <img src="assets/images/head.jpg" class="image" id="image-2" />
+          </div>
+          <button id="btn-swap-2" class="btn btn-primary">Swap</button>
+        </div>
+        <div class="d-flex flex-column justify-content-center p-3">
+          <div id="frame3" class="frame mb-3">
+            <img
+              src="assets/images/mobile-phone.jpg"
+              class="image"
+              id="image-3"
+            />
+          </div>
+          <button id="btn-swap-3" class="btn btn-primary">Swap</button>
+        </div>
       </section>
     </main>
 
