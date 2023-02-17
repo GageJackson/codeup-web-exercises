@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Online Store</title>
+    <link href="bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container p-5">
+      <h1>My Tool Store</h1>
+
+      <table class="table table-striped border" id="products">
+        <thead class="bg-primary text-light">
+          <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+          </tr>
+        </thead>
+        <tbody id="insertProducts"></tbody>
+      </table>
+      <button id="btn-refresh" class="btn btn-primary">Refresh</button>
+    </div>
+    <!-- jQuery -->
+    <script src="js/jquery-3.6.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+
+    <script>
+      (function () {
+        "use strict";
+        // TODO: Create an AJAX GET request for the file under data/inventory.json
+
+        $.ajax("/data/inventory.json").done(function (data, status, jqXhr) {
+          console.log("Ajax worked");
+          console.log("Request status: " + status);
+          console.log("Data returned from server:");
+          console.log(data);
+          createInventoryTable(data);
+        });
+
+        // TODO: Take the data from inventory.json and append it to the products table
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+        function createInventoryTable(data) {
+          let tools = data;
+          let html = "";
+          tools.forEach((tool) => {
+            let categoryString = "";
+            html += "<tr>";
+            html += "<td>" + tool.title + "</td>";
+            html += "<td>" + tool.quantity + "</td>";
+            html += "<td>" + "$" + tool.price + "</td>";
+            tool.categories.forEach((category) => {
+              categoryString += category + " ";
+            });
+            html += "<td>" + categoryString + "</td>";
+            html += "</tr>";
+          });
+          $("#insertProducts").html(html);
+        }
+      })();
+      $("#btn-refresh").click(function (event) {
+        event.preventDefault();
+        console.log("click");
+        $.post("/data/inventory.json", {
+          title: "Shirt",
+          quantity: "13",
+          price: "2",
+          categories: "[clothes, merch]",
+        }).done(function (test) {
+          console.log(test);
+        });
+      });
+    </script>
+  </body>
+</html>
