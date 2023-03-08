@@ -22,7 +22,7 @@ $(function () {
   });
   $("li").click(function (event) {
     event.preventDefault();
-    $(this).parent().parent().css("color", "#00f");
+    $(this).parent().children().first().css("color", "#00f");
   });
 
   let galleryArray = [

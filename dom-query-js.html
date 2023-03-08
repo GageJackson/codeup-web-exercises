@@ -65,10 +65,10 @@
           // TODO: Set text color on every other list item to grey
           // TODO: Set text color of li with dbid = 1 to blue
           for (let i = 0; i < listItems.length; i++) {
-            var dbId = listItems[i].getAttribute("data-dbid");
-            if (i + 1 === 1) {
+            //var dbId = listItems[i].getAttribute("data-dbid");
+            if (i === 0) {
               listItems[i].style.color = "#00F";
-            } else if ((i + 1) % 2 === 0) {
+            } else if (i % 2 === 1) {
               listItems[i].style.color = "#9b9b9b";
             } else {
             }
@@ -84,13 +84,13 @@
           subParagraphs.item(0).innerHTML = "Mission Accomplished!";
         };
 
-        var button01 = document.getElementById("button-01");
+        const button01 = document.getElementById("button-01");
         button01.addEventListener("click", changeHelloWorldButton);
-        var button02 = document.getElementById("button-02");
+        const button02 = document.getElementById("button-02");
         button02.addEventListener("click", colorHelloTextButton);
-        var button03 = document.getElementById("button-03");
+        const button03 = document.getElementById("button-03");
         button03.addEventListener("click", changeListColorButton);
-        var button04 = document.getElementById("button-04");
+        const button04 = document.getElementById("button-04");
         button04.addEventListener("click", completeMissionButton);
       })();
     </script>
