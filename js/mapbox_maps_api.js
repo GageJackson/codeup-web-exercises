@@ -1,6 +1,11 @@
-mapboxgl.accessToken = js / mapskey;
-var map = new mapboxgl.Map({
-  container: "map", // container ID
+"use strict";
+
+import { mapboxKey, gMapsKey } from "./keys";
+const mapLocation = document.querySelector("#mapSpot");
+
+mapboxgl.accessToken = mapboxKey;
+let map = new mapboxgl.Map({
+  container: mapLocation, // container ID
   style: "mapbox://styles/mapbox/streets-v11", // style URL
   //zoom: 14, // starting zoom
   //center: [-95.30066320177026, 32.35079556652797], // [lng, lat]
@@ -29,7 +34,7 @@ reverseGeocode({ lng: -95.30192, lat: 32.35086 }, mapskey).then(function (
 
  */
 // the  geocode method from mapbox-geocoder-utils.js
-geocode("3324 Old Henderson Hwy, Tyler, TX 75703", mapskey).then(function (
+geocode("3324 Old Henderson Hwy, Tyler, TX 75703", mapboxKey).then(function (
   result
 ) {
   console.log(result);
