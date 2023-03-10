@@ -1,6 +1,6 @@
 [
   {
-    "restaurant": "Villa Montez",
+    "name": "Villa Montez",
     "description": "Simply the best Mexican food in town. Fine dining at its finest",
     "images": [
       "assets/images/villaMontez.jpeg"
@@ -8,19 +8,19 @@
     "rating": "#1",
     "address": "3324 Old Henderson Hwy, Tyler, TX 75703"
   }, {
-  "restaurant": "Wasabi Sushi Bar & Asian Bistro",
+  "name": "Wasabi Sushi Bar & Asian Bistro",
   "description": "Great sushi, much yum",
   "images": [
-    "assets/images/villaMontez.jpeg"
+    "assets/images/wasabi.jpg"
   ],
   "rating": "#2",
   "address": "5617 S Donnybrook Ave, Tyler, TX 75703"
 },
   {
-    "restaurant": "The Foundry Coffee House",
+    "name": "The Foundry Coffee House",
     "description": "Great coffee, great baristas, great times",
     "images": [
-      "assets/images/villaMontez.jpeg"
+      "assets/images/theFoundry.jpeg"
     ],
     "rating": "#3",
     "address": "202 S Broadway Ave, Tyler, TX 75702"
