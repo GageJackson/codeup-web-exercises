@@ -1,11 +1,9 @@
+const zoomLevel = document.querySelector("#zoomSelector");
+const changeLocation = document.querySelector("#btn-submit-address");
+
 $.ajax("/data/favoriteRestaurants.json").done(function (data, status, jqXhr) {
   createPointsOfInterest(data);
 });
-
-const zoomLevel = document.querySelector("#zoomSelector");
-const changeLocation = document.querySelector("#btn-submit-address");
-const mapboxKey =
-  "pk.eyJ1IjoiZ2FnZWphY2tzb24iLCJhIjoiY2xlOTE5NGh4MGtsbzNyczN5eXp4Nzd1eiJ9.LKDaekT77moIJzCdQbqcIw";
 
 mapboxgl.accessToken = mapboxKey;
 const map = new mapboxgl.Map({
@@ -16,23 +14,32 @@ const map = new mapboxgl.Map({
 });
 
 function createPointsOfInterest(data) {
-  for (const rando of data.features) {
+  data.forEach(function (pointOfInterest) {
     // create a HTML element for each feature
     const createdElement = document.createElement("div");
     createdElement.className = "marker";
-
+    console.log(pointOfInterest.coordinates);
     // make a marker for each feature and add it to the map
     new mapboxgl.Marker(createdElement)
-      .setLngLat(rando.geometry.coordinates)
+      .setLngLat(pointOfInterest.coordinates)
       .setPopup(
         new mapboxgl.Popup({ offset: 25 }) // add popups
           .setHTML(
-            `<h3>${rando.properties.title}</h3>
-            <p>${rando.properties.description}</p>`
+            `<div class='card'>
+            <div class='card-header bg-primary text-light'>
+            <h5>${pointOfInterest.name}</h5>
+            <span>${pointOfInterest.rating}</span>
+            </div>
+            <div class='card-body p-0'>
+            <img src='${pointOfInterest.images[0]}'alt='text' style='width: 100%; height: 100%'>
+            </div>
+            <div class='card-footer bg-primary'>
+            <p>${pointOfInterest.description}</p>
+            </div>`
           )
       )
       .addTo(map);
-  }
+  });
 }
 
 changeLocation.addEventListener("click", () => {
@@ -51,6 +58,7 @@ zoomLevel.addEventListener("change", () => {
   console.log(zoomLevel.value);
   map.setZoom(zoomLevel.value);
 });
+
 // Start the animation.
 //requestAnimationFrame(animateMarker);
 map.on("load", function () {

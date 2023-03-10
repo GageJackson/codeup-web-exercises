@@ -17,17 +17,14 @@
       }
 
       .marker {
-        background-image: url("assets/icons/fire.svg");
+        mask: url("assets/icons/fire.svg");
         background-size: cover;
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 45px;
         border-radius: 50%;
         cursor: pointer;
-      }
-
-      .mapboxgl-popup {
-        padding: 0;
-        background: none;
+        background-color: red;
+        background-repeat: no-repeat;
       }
     </style>
   </head>
@@ -36,11 +33,11 @@
       <div class="card m-3 bg-primary text-light col-12">
         <div class="card-header row">
           <h1 class="col-12">My First Mapbox Map!</h1>
-          <label for="zoomSelector" class="col-2 form-label">Zoom </label>
-          <select id="zoomSelector" class="col-10 form-select-sm">
-            <option>6</option>
-            <option selected>12</option>
-            <option>18</option>
+          <label for="zoomSelector" class=""></label>
+          <select id="zoomSelector" class="col-12 form-select-sm">
+            <option value="6">Zoom 06</option>
+            <option selected value="12">Zoom 12</option>
+            <option value="18">Zoom 18</option>
           </select>
         </div>
         <div class="card-body p-0">
@@ -69,7 +66,8 @@
     <!-- Bootstrap JS -->
     <script src="bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
     <!-- Custom JS -->
-    <script>
+    <script src="js/mapbox_maps_api.js"></script>
+    <!--<script>
       const zoomLevel = document.querySelector("#zoomSelector");
       const changeLocation = document.querySelector("#btn-submit-address");
       //let pointLocations = [];
@@ -190,5 +188,7 @@
 
        */
     </script>
+  </body>
+</html> -->
   </body>
 </html>
