@@ -46,9 +46,7 @@ changeLocation.addEventListener("click", () => {
   let location = document.querySelector("#userLocation").value;
   geocode(location, mapboxKey).then(function (result) {
     console.log(result);
-    //6812 southplace drive, tyler, tx 75703
     //6354 creekview lane, fishers, in 46038
-    //map.setCenter(result);
     map.flyTo({ center: result, zoom: 16 });
     let marker = new mapboxgl.Marker().setLngLat(result).addTo(map);
   });
@@ -60,7 +58,6 @@ zoomLevel.addEventListener("change", () => {
 });
 
 // Start the animation.
-//requestAnimationFrame(animateMarker);
 map.on("load", function () {
   requestAnimationFrame(animateMarker);
 });
