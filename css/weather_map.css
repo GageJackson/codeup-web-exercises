@@ -1,0 +1,16 @@
+.bg-mine {
+  background-color: #35c3c3;
+  color: #35c3c3;
+}
+
+img {
+  aspect-ratio: 1;
+}
+
+.temp {
+  height: 10px;
+}
+
+.currentGif {
+  height: 40px;
+}
