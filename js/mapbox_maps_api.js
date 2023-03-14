@@ -8,7 +8,7 @@ $.ajax("/data/favoriteRestaurants.json").done(function (data, status, jqXhr) {
 mapboxgl.accessToken = mapboxKey;
 const map = new mapboxgl.Map({
   container: "map", // container ID
-  style: "mapbox://styles/gagejackson/clf2s2gln001601qik4wqike1", // style URL
+  style: "mapbox://styles/gagejackson/clf2rk9pm000u01w3fa0kqmvr", // style URL
   zoom: 12, // starting zoom
   center: [-95.275, 32.315], // [lng, lat]
 });

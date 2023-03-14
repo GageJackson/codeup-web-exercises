@@ -1,16 +1,62 @@
-$.get("http://api.openweathermap.org/data/2.5/onecall", {
-  APPID: weatherKey,
-  lat: 29.423017,
-  lon: -98.48527,
-  units: "imperial",
-}).done(function (data) {
-  console.log("The entire response:", data);
-  setLocationName(data);
+let locationCoord = [-98.48527, 29.423017];
+setPage(locationCoord);
+
+mapboxgl.accessToken = mapboxKey;
+const map = new mapboxgl.Map({
+  container: "map", // container ID
+  style: "mapbox://styles/gagejackson/clf2s2gln001601qik4wqike1", // style URL
+  zoom: 12, // starting zoom
+  center: locationCoord, // [lng, lat]
+});
+function setPage(locationCoord) {
+  $.get("http://api.openweathermap.org/data/2.5/onecall", {
+    APPID: weatherKey,
+    lat: locationCoord[1],
+    lon: locationCoord[0],
+    units: "imperial",
+  }).done(function (data) {
+    console.log("The entire response:", data);
+    setLocationName(data);
+  });
+}
+
+let marker = new mapboxgl.Marker({ draggable: true })
+  .setLngLat(locationCoord)
+  .addTo(map);
+//marker.addEventListener("dragend", newLocation);
+
+function onDragEnd() {
+  let dragCoords = marker.getLngLat();
+  locationCoord = [dragCoords.lng, dragCoords.lat];
+  setPage(locationCoord);
+}
+
+marker.on("dragend", onDragEnd);
+map.on("click", (e) => {
+  let dragCoords = e.lngLat;
+  locationCoord = [dragCoords.lng, dragCoords.lat];
+  marker.setLngLat(locationCoord);
+  setPage(locationCoord);
 });
 
 const currentWeatherDiv = document.querySelector("#currentWeather");
 const forecastedWeatherDiv = document.querySelector(".carousel-inner");
 const forecastedWeatherTiles = document.querySelector("#forecastTiles");
+const newLocationButton = document.querySelector("#btn-submit-address");
+
+newLocationButton.addEventListener("click", () => {
+  let location = document.querySelector("#userLocation").value;
+  geocode(location, mapboxKey).then(function (result) {
+    console.log(result);
+    //6354 creekview lane, fishers, in 46038
+    map.flyTo({ center: result, zoom: 16 });
+    marker.setLngLat(result);
+    locationCoord = result;
+    setPage(locationCoord);
+  });
+});
+
+function newLocation() {}
 
 function setCurrentWeatherDiv(data, myLocation) {
   let weatherGif = getWeatherGif(data.current.weather[0].id);
@@ -117,8 +163,8 @@ function getForecastedWeatherTiles(data) {
   let html = "";
   for (let i = 1; i < forecastedDayCount; i++) {
     let weatherGif = getWeatherGif(data.daily[i].weather[0].id);
-    html += '<div class="card col-6 col-md my-2 p-0">';
-    html += '<div class="card-header colorMe text-white p-0 pt-3">';
+    html += '<div class="card col p-0 m-1 m-md-2 m-lg-3">';
+    html += '<div class="card-header colorMe text-white p-2 pt-3">';
     html += "<h3 class='text-center'>" + getDate(data.daily[i].dt) + "</h3>";
     html += "</div>";
     html += '<div class="card-body">';
@@ -180,7 +226,7 @@ function getWeatherGif(weatherState) {
     weatherGifSource = "/assets/weather-gifs/rain.gif";
   }
   if (weatherState < 700 && weatherState >= 600) {
-    weatherGifSource = "/assets/weather-gifs/snow.gif";
+    weatherGifSource = "/assets/weather-gifs/snow-2.gif";
   }
   if (weatherState < 800 && weatherState >= 700) {
     if (weatherState === 781) {
