@@ -1,16 +1,29 @@
-.bg-mine {
+:root {
+  --bs-primary: #35c3c3;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn {
   background-color: #35c3c3;
-  color: #35c3c3;
 }
 
-img {
-  aspect-ratio: 1;
+.colorMe {
+  background-color: #35c3c3;
 }
 
-.temp {
-  height: 10px;
+.forecastCard {
 }
 
-.currentGif {
-  height: 40px;
+.verticalText {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 3rem;
+  font-weight: bolder;
 }
