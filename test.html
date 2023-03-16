@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+<html>
+  <head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <div id="my-plot"></div>
+    <script>
+      var trace = {
+        x: [1, 2, 3],
+        y: [4, 5, 6],
+        mode: "lines",
+        line: {
+          color: "blue",
+          width: 3,
+        },
+      };
+
+      var data = [trace];
+
+      Plotly.newPlot("my-plot", data);
+    </script>
+  </body>
 </html>

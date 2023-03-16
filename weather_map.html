@@ -2,8 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Weather or not, here I come</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/weather-gifs/sun-icon.png"
+    />
     <!-- Bootstrap Css -->
     <link href="bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Mapbox JS -->
@@ -44,77 +50,128 @@
               <!-- Simple Forecast Cards Here -->
             </div>
           </div>
-        </div>
 
-        <div
-          id="forecastCarousel"
-          class="carousel p-0 m-0 row"
-          data-bs-ride="carousel"
+          <div class="col-12 card p-0">
+            <div class="d-flex align-items-start">
+              <div
+                class="nav flex-column nav-pills nav-justified me-3"
+                id="weatherTabs"
+                role="tablist"
+                aria-orientation="vertical"
+              >
+                <button
+                  class="nav-link active"
+                  id="weather-tab-1"
+                  data-bs-toggle="pill"
+                  data-bs-target="#weather-1"
+                  type="button"
+                  role="tab"
+                  aria-controls="weather-1"
+                  aria-selected="true"
+                >
+                  Day 1
+                </button>
+                <button
+                  class="nav-link"
+                  id="weather-tab-2"
+                  data-bs-toggle="pill"
+                  data-bs-target="#weather-2"
+                  type="button"
+                  role="tab"
+                  aria-controls="weather-2"
+                  aria-selected="false"
+                >
+                  Day 2
+                </button>
+                <button
+                  class="nav-link"
+                  id="weather-tab-3"
+                  data-bs-toggle="pill"
+                  data-bs-target="#weather-3"
+                  type="button"
+                  role="tab"
+                  aria-controls="weather-3"
+                  aria-selected="false"
+                >
+                  Day 3
+                </button>
+                <button
+                  class="nav-link"
+                  id="weather-tab-4"
+                  data-bs-toggle="pill"
+                  data-bs-target="#weather-4"
+                  type="button"
+                  role="tab"
+                  aria-controls="weather-4"
+                  aria-selected="false"
+                >
+                  Day 4
+                </button>
+                <button
+                  class="nav-link"
+                  id="weather-tab-5"
+                  data-bs-toggle="pill"
+                  data-bs-target="#weather-5"
+                  type="button"
+                  role="tab"
+                  aria-controls="weather-5"
+                  aria-selected="false"
+                >
+                  Day 5
+                </button>
+              </div>
+              <div class="tab-content bg-white" id="weatherTabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="weather-1"
+                  role="tabpanel"
+                  aria-labelledby="weather-tab-1"
+                >
+                  Weather1
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="weather-2"
+                  role="tabpanel"
+                  aria-labelledby="weather-tab-2"
+                >
+                  Weather2
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="weather-3"
+                  role="tabpanel"
+                  aria-labelledby="weather-tab-3"
+                >
+                  Weather3
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="weather-4"
+                  role="tabpanel"
+                  aria-labelledby="weather-tab-4"
+                >
+                  Weather4
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="weather-5"
+                  role="tabpanel"
+                  aria-labelledby="weather-tab-5"
+                >
+                  Weather5
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a
+          href="https://www.flaticon.com"
+          title="animated icons"
+          class="text-dark text-opacity-25"
+          >Icons created by Freepik - Flaticon</a
         >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#forecastCarousel"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#forecastCarousel"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#forecastCarousel"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#forecastCarousel"
-              data-bs-slide-to="3"
-              aria-label="Slide 4"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#forecastCarousel"
-              data-bs-slide-to="4"
-              aria-label="Slide 5"
-            ></button>
-          </div>
-
-          <div class="carousel-inner p-0">
-            <!-- Insert Forecast Here -->
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#forecastCarousel"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#forecastCarousel"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
       </div>
-      <a
-        href="https://www.flaticon.com"
-        title="temperature animated icons"
-        class="text-light"
-        >Animated icons created by Freepik - Flaticon</a
-      >
     </section>
 
     <!-- jQuery -->

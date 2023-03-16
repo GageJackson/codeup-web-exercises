@@ -17,6 +17,8 @@ function setPage(locationCoord) {
   }).done(function (data) {
     console.log("The entire response:", data);
     setLocationName(data);
+    setWeatherTabs(data);
+    setWeatherTabContent(data);
   });
 }
 
@@ -40,9 +42,10 @@ map.on("click", (e) => {
 });
 
 const currentWeatherDiv = document.querySelector("#currentWeather");
-const forecastedWeatherDiv = document.querySelector(".carousel-inner");
-const forecastedWeatherTiles = document.querySelector("#forecastTiles");
+const forecastedWeatherTilesDiv = document.querySelector("#forecastTiles");
 const newLocationButton = document.querySelector("#btn-submit-address");
+const weatherTabsDiv = document.getElementsByClassName("nav-link");
+const weatherTabContentDiv = document.getElementsByClassName("tab-pane");
 
 newLocationButton.addEventListener("click", () => {
   let location = document.querySelector("#userLocation").value;
@@ -56,7 +59,53 @@ newLocationButton.addEventListener("click", () => {
   });
 });
 
-function newLocation() {}
+function setWeatherTabs(data) {
+  for (let i = 0; i < weatherTabsDiv.length; i++) {
+    weatherTabsDiv[i].innerText = getDate(data.daily[i].dt);
+  }
+}
+
+function setWeatherTabContent(data) {
+  let html = "";
+  for (let i = 0; i < weatherTabContentDiv.length; i++) {
+    let weatherGif = getWeatherGif(data.daily[i].weather[0].id);
+    let weatherChart = "";
+    html += "<div class='col-4'>";
+    html +=
+      "<img src=" +
+      weatherGif +
+      ' alt="weather gif" class="img-fluid align-self-center">';
+    html += '<div class="row">';
+    html +=
+      '<img src="/assets/weather-gifs/cold.png" alt="low temp" class="col-2 img-fluid w-25 mb-2">';
+    html +=
+      "<p class='col align-self-center'>" +
+      Math.round(data.daily[i].temp.min) +
+      "<span class='unit'>&#8457</span></p>";
+    html += "</div>";
+    html += '<div class="row">';
+    html +=
+      '<img src="/assets/weather-gifs/hot.png" alt="high temp" class="col-2 img-fluid w-25 mb-2">';
+    html +=
+      "<p class='col align-self-center'>" +
+      Math.round(data.daily[i].temp.max) +
+      "<span class='unit'>&#8457</span></p>";
+    html += "</div>";
+    html += '<div class="row">';
+    html +=
+      '<img src="/assets/weather-gifs/umbrella.png" alt="chance of rain" class="col-2 img-fluid w-25 mb-2">';
+    html +=
+      "<p class='col align-self-center'>" +
+      Math.round(data.daily[i].pop * 100) +
+      "<span class='unit'>%</span></p>";
+    html += "</div>";
+    html += "</div>";
+    html += "</div>";
+
+    weatherTabContentDiv[i].innerHTML = html;
+    html = "";
+  }
+}
 
 function setCurrentWeatherDiv(data, myLocation) {
   let weatherGif = getWeatherGif(data.current.weather[0].id);
@@ -128,36 +177,9 @@ function setLocationName(data) {
 }
 
 function setForecastedWeather(data) {
-  forecastedWeatherTiles.innerHTML = getForecastedWeatherTiles(data);
-  forecastedWeatherDiv.innerHTML = getForecastedWeatherCarousel(data);
+  forecastedWeatherTilesDiv.innerHTML = getForecastedWeatherTiles(data);
 }
 
-function getForecastedWeatherCarousel(data) {
-  let forecastedDayCount = 5;
-  let html = "";
-  for (let i = 0; i < forecastedDayCount; i++) {
-    let weatherGif = getWeatherGif(data.daily[i].weather[0].id);
-    html += '<div class="carousel-item active">'; //1
-    html += '<div class="card forecastCard">'; //2
-    html += '<div class="card-body">'; //3
-    html += '<div class="col-12">'; //4
-    html += getDate(data.daily[i].dt);
-    html += "</div>"; //4
-    html += '<div class="col-12">'; //4
-    html +=
-      "<img src=" +
-      weatherGif +
-      ' alt="weather gif" class="img-fluid align-self-center">';
-    html += "</div>"; //4
-    html += "</div>"; //3
-    html += '<div class="card-footer">'; //3
-    html += data.daily[i].dt;
-    html += "</div>"; //3
-    html += "</div>"; //2
-    html += "</div>"; //1
-  }
-  return html;
-}
 function getForecastedWeatherTiles(data) {
   let forecastedDayCount = 5;
   let html = "";
